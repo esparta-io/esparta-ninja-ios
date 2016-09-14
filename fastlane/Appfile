@@ -1,4 +1,4 @@
-app_identifier "" # The bundle identifier of your app
+app_identifier "io.esparta.esparta-ninja" # The bundle identifier of your app
 apple_id "developer@esparta.io" # Your Apple email address
 
 team_id "253VF8J9M2"  # Developer Portal Team ID
