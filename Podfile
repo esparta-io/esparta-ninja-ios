@@ -6,5 +6,7 @@ target 'esparta-ninja' do
   use_frameworks!
 
   # Pods for esparta-ninja
-
+  pod 'Fabric'
+  pod 'Crashlytics'
+  
 end

@@ -30,9 +30,24 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
-    # match(type: "appstore") # more information: https://codesigning.guide
-    gym # Build your app - more options available
-    pilot
+    cert(output_path: "./certificates")
+    sigh(output_path: "./certificates")
+
+    new_version_number = increment_version_number(
+      bump_type: "patch"
+    )
+    
+    gym(scheme: "esparta-ninja",
+      provisioning_profile_path: "./certificates/Development_io.esparta.esparta-ninja.mobileprovision",
+      use_legacy_build_api: true
+    )
+    
+    crashlytics(
+      api_token: "8382bfd3c9c59a468310fe80892b0f6e666c1c33",
+      build_secret: "7229488462f7b621187ef2046889927e5fc0ac660997a13ced995ae79f8b45d0",
+      groups: "esparta",
+      notes: "Automatic iOS Build"
+    )
 
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)
