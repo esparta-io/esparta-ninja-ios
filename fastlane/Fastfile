@@ -35,7 +35,7 @@ platform :ios do
     #sigh(output_path: "./certificates")
 
     #if is_ci? ... else ... end
-    setup_jenkins
+    #setup_jenkins
 
     #delete_keychain(name: "JenkinsKeys")
     #create_keychain(
@@ -57,8 +57,9 @@ platform :ios do
       bump_type: "patch"
     )
     
-    gym(scheme: "esparta-ninja",
-      provisioning_profile_path: "./certificates/Development_io.esparta.esparta-ninja.mobileprovision",
+    gym(
+      scheme: "esparta-ninja",
+      #provisioning_profile_path: "./certificates/Development_io.esparta.esparta-ninja.mobileprovision",
       use_legacy_build_api: true
     )
     
