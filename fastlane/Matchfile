@@ -1,5 +1,5 @@
-git_url "git@github.com:esparta-io/ios-certificates.git"
-#git_url "https://github.com/esparta-io/ios-certificates.git"
+#git_url "git@github.com:esparta-io/ios-certificates.git"
+git_url "https://937f05f38161553d5280a9c73f33070c4ef6a05a@github.com/esparta-io/ios-certificates.git"
 
 git_branch "esparta-ninja"
 
