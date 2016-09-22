@@ -1,0 +1,10 @@
+git_url "git@github.com:esparta-io/ios-certificates.git"
+git_branch "esparta-ninja"
+
+type "development" # The default type, can be: appstore, adhoc or development
+
+# app_identifier "tools.fastlane.app" 
+username "developer@esparta.io" # Your Apple Developer Portal username
+
+# For all available options run `match --help`
+# Remove the # in the beginning of the line to enable the other options
