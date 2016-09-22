@@ -61,8 +61,7 @@ platform :ios do
     
     gym(
       scheme: "esparta-ninja",
-      provisioning_profile_path: "./certificates/Development_io.esparta.esparta-ninja.mobileprovision",
-      use_legacy_build_api: true
+      provisioning_profile_path: "./certificates/Development_io.esparta.esparta-ninja.mobileprovision"
     )
     
     crashlytics(
